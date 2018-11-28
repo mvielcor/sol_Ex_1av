@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="etp_nom"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="Cap"
+        android:title="Nom Usuari" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/array_colors"
+        android:entryValues="@array/array_colors"
+        android:key="color_fragment"
+        android:title="Color del Fragment Botonera" />
+</PreferenceScreen>

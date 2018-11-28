@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="mviel.pmdm.examen1819.MainActivity">
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="mviel.pmdm.examen1819.BotoneraFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="mviel.pmdm.examen1819.EmailFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25" />
+
+
+
+</LinearLayout>
