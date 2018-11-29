@@ -23,14 +23,15 @@ public class Subactivity extends Activity implements View.OnClickListener{
         b_si.setOnClickListener(this);
         b_no.setOnClickListener(this);
 
-        //REcollim els parametres que ens envia el MainActivity
+        //Recollim els parametres que ens envia el MainActivity
         Bundle b= getIntent().getExtras();
-
+        // Utilitze un StringBuilder ja que per a concatenar missatges esta classe és més òptima que
+        // utilitzar la classe String
         StringBuilder sb = new StringBuilder();
         sb.append(b.get("destinatari"));
         sb.append(b.get("assumpte"));
         sb.append(b.get("missatge"));
-
+        //Mostre el text al textView
         tv.setText(sb.toString());
 
 
@@ -39,12 +40,14 @@ public class Subactivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         Intent i = new Intent();
-
+        // Si l'usuari polsa el botó Si...
         if(view.getId()==R.id.btn_si){
+            // ... El resultat serà OK
            setResult(RESULT_OK);
         }else{
+            // ... sino, el resultat sera KO
             setResult(RESULT_CANCELED);
         }
-        finish();
+        finish();  //Tanquem el subactivity i torna l'execuaió al mètode onActivityResult() del MainActivity
     }
 }
