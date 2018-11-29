@@ -18,14 +18,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link BotoneraFragment.ComunicadorAmbActivity} interface
- * to handle interaction events.
- * Use the {@link BotoneraFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class BotoneraFragment extends Fragment implements View.OnClickListener{
 
     private ComunicadorAmbActivity comunicador;
@@ -37,15 +30,7 @@ public class BotoneraFragment extends Fragment implements View.OnClickListener{
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BotoneraFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static BotoneraFragment newInstance(String param1, String param2) {
         BotoneraFragment fragment = new BotoneraFragment();
         Bundle args = new Bundle();
@@ -83,7 +68,7 @@ public class BotoneraFragment extends Fragment implements View.OnClickListener{
             comunicador = (ComunicadorAmbActivity) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement ComunicadorAmbActivity");
+                    + " has d'implementar ComunicadorAmbActivity");
         }
     }
 
@@ -110,7 +95,7 @@ public class BotoneraFragment extends Fragment implements View.OnClickListener{
         //color de fons
         String color = preferenciesDUsuari.getString("color_fragment","");
 
-
+        //Pintem el layout del fragment del color que indica les preferencies
         if (color.equals("Roig")) {
             layout_coloreable.setBackgroundColor(Color.RED);
         } else {
@@ -128,18 +113,9 @@ public class BotoneraFragment extends Fragment implements View.OnClickListener{
 
         }
     }
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+
     public interface ComunicadorAmbActivity {
-        // TODO: Update argument type and name
+        //Mètodes que utilitza el fragment per a comunicar-se amb l'activity
         void confirmaDadesEmail();
         void mostraPreferencies();
     }

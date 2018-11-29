@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 public class ActivityPreferencies extends PreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
 
-    private SharedPreferences preferenciesDUsuari;
+    private SharedPreferences preferenciesDUsuari; //Objecte per llegir i manipular les preferencies
 
 
     @Override
